@@ -36,14 +36,15 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(188, 212);
+            this.button1.Location = new System.Drawing.Point(163, 201);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(125, 44);
             this.button1.TabIndex = 0;
             this.button1.Text = "Result";
             this.button1.UseVisualStyleBackColor = true;
@@ -55,13 +56,11 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "(none)",
-            "Meter",
-            "KiloMeter",
-            "Feet"});
-            this.comboBox1.Location = new System.Drawing.Point(299, 135);
+            "Celcius 2 Fahrenhit",
+            "Fahrenhit 2 Celcius"});
+            this.comboBox1.Location = new System.Drawing.Point(67, 174);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(317, 21);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -85,24 +84,26 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
             this.radioButton1.Location = new System.Drawing.Point(30, 19);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(69, 17);
+            this.radioButton1.Size = new System.Drawing.Size(85, 17);
             this.radioButton1.TabIndex = 4;
-            this.radioButton1.Text = "Farhenhit";
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Temperature";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Checked = true;
             this.radioButton2.Location = new System.Drawing.Point(30, 56);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(59, 17);
+            this.radioButton2.Size = new System.Drawing.Size(67, 17);
             this.radioButton2.TabIndex = 5;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Celcius";
+            this.radioButton2.Text = "Distance";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // textBox2
             // 
@@ -117,17 +118,32 @@
             // 
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Location = new System.Drawing.Point(269, 24);
+            this.groupBox1.Location = new System.Drawing.Point(269, 68);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(151, 88);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.AllowDrop = true;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "CentiMeter 2 Meter",
+            "CentiMeter 2 KiloMeter",
+            "CentiMeter 2 Feet"});
+            this.comboBox2.Location = new System.Drawing.Point(67, 174);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(317, 21);
+            this.comboBox2.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 374);
+            this.ClientSize = new System.Drawing.Size(431, 374);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -153,6 +169,7 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
 
